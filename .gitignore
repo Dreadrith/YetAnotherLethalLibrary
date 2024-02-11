@@ -69,7 +69,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 .idea
-UpsetTummy/bin/*
-UpsetTummy/obj/*
-UpsetTummy/UpsetTummy.csproj
-UpsetTummy.sln
+bin/*
