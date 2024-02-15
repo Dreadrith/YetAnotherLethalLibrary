@@ -1,39 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using BepInEx.Logging;
-using UnityEngine;
 
 namespace YetAnotherLethalLibrary
 {
-	public static class Helper
+	public static class Utility
 	{
-		/*internal static Type ExtendedGetType(string typeName)
-		{
-			var myType = Type.GetType(typeName);
-			if (myType != null)
-				return myType;
-			foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
-			{
-				var types = assembly.GetTypes();
-				myType = types.FirstOrDefault(t  => t.FullName == typeName);
-				if (myType != null)
-					return myType;
-				myType = types.FirstOrDefault(t => t.Name == typeName);
-				if (myType != null)
-					return myType;
-			}
-			return null;
-		}
-
-		internal static Type HarmonyGetType(string typeName) => AccessTools.TypeByName(typeName);*/
-		
-		internal static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
-		{ foreach (var item in enumerable) action(item); }
-
 		internal static bool ConditionLog(string message, bool condition = true, LogLevel logLevel = LogLevel.Info)
 		{
-			if (condition) MyPlugin.instance.logSource.Log(logLevel, message);
+			if (condition) YALLPlugin.instance.logSource.Log(logLevel, message);
 			return condition;
 		}
 

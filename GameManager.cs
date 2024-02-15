@@ -63,7 +63,7 @@ public static class GameManager
 	{
 		player = null;
 		var ins = StartOfRound.Instance;
-		if (Helper.ConditionLog($"StartOfRound.Instance is null! Can't get player controller.", ins == null, LogLevel.Error)) return false;
+		if (Utility.ConditionLog($"StartOfRound.Instance is null! Can't get player controller.", ins == null, LogLevel.Error)) return false;
 		player = StartOfRound.Instance.allPlayerScripts.FirstOrDefault(pc => pc.actualClientId == id);
 		return player != null;
 	}

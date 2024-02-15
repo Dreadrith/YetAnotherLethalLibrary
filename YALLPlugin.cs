@@ -5,11 +5,11 @@ using HarmonyLib;
 namespace YetAnotherLethalLibrary;
 
 [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-public class MyPlugin : BaseUnityPlugin
+public class YALLPlugin : BaseUnityPlugin
 {
-    public static readonly Harmony _harmony = new Harmony(PluginInfo.PLUGIN_GUID);
-    public static MyPlugin instance;
-    public ManualLogSource logSource => Logger;
+    internal static readonly Harmony _harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+    internal ManualLogSource logSource => Logger;
+    public static YALLPlugin instance;
     private void Awake()
     {
         instance = this;

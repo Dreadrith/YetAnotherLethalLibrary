@@ -6,7 +6,7 @@ using BepInEx.Logging;
 using GameNetcodeStuff;
 using UnityEngine;
 using UnityEngine.Networking;
-using static YetAnotherLethalLibrary.Helper;
+using static YetAnotherLethalLibrary.Utility;
 
 namespace YetAnotherLethalLibrary;
 
@@ -116,8 +116,6 @@ public static class AudioManager
 				return AudioType.UNKNOWN;
 		}
 	}
-	
-	
 	
 	public static void PlayAudio(ulong clientID, AudioClip clip, float volume = 1, float range = 20, float loudness = 0.5f, bool audibleToEnemies = true)
 	{
